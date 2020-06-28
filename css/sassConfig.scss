@@ -1,0 +1,46 @@
+@charset "UTF-8";
+/*主色*/
+$color-mian: #4b4b4b;
+
+/*文字主色*/
+$text-gray: #a9a9a9;
+
+
+
+
+/*主题宽度*/
+$container: 1200px;
+
+/*定义浏览器内核属性*/
+@mixin webkit($type,$value){
+		-webkit-#{$type}: $value;
+		-moz-#{$type}: $value;
+		-ms-#{$type}: $value;
+		-o-#{$type}: $value;
+		#{$type}: $value;
+}
+
+
+@mixin ell($number){
+	display: -webkit-box;
+	-webkit-line-clamp:$number;
+	-webkit-box-orient:vertical;
+	overflow: hidden;
+
+
+	display: -moz-box;
+	-moz-line-clamp:$number;
+	-moz-box-orient:vertical;
+
+	display: -ms-box;
+	-ms-line-clamp:$number;
+	-ms-box-orient:vertical;
+
+	display: -o-box;
+	-o-line-clamp:$number;
+	-o-box-orient:vertical;
+
+	display: box;
+	line-clamp:$number;
+	box-orient:vertical;
+}
